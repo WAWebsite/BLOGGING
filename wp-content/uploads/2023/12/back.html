@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+background-color: rgb(49, 40, 40);
+
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+     transform-style: preserve-3d;
+} 
+.card .face{
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+transition: 2s ease-in-out;
+backface-visibility: hidden;
+transform: perspective(500px) rotateY(0deg);
+}
+.card .face.front{
+    background-color: #ff0;
+}
+.card:hover .face.front{
+    transform: perspective(500px) rotateY(180deg);
+
+}
+.card .face.back{
+    background-color: #3bc2ff;
+    color: #fff;
+transform: perspective(500px) rotateY(180deg);
+
+
+}
+.card:hover .face.back{
+    transform: perspective(500px) rotateY(360deg);
+
+}
+.card .face h2{
+    font-size: 4em;
+    text-transform: uppercase;
+    transform: perspective(500px) translateZ(50px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <div class="card">
+        <div class="face front  ">
+            <h2>Front</h2>
+        </div>
+        <div class="face back ">
+            <h2>Back</h2>
+        </div>
+    </div>
+</body>
+</html>
